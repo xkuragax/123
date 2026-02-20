@@ -1,0 +1,21 @@
+name = "multitrack-api"
+main = "worker/index.js"
+compatibility_date = "2024-01-01"
+
+# D1 Database - хранение альбомов, песен, треков
+[[d1_databases]]
+binding = "DB"
+database_name = "multitrack-db"
+database_id = "ЗАМЕНИТЬ_НА_ID_ИЗ_КОНСОЛИ"
+
+# R2 Bucket - хранение аудио файлов и обложек
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "multitrack-files"
+
+# Environment variables
+[vars]
+ADMIN_PASSWORD = "admin123"
+
+# Secrets (задаются через wrangler secret put)
+# ADMIN_TOKEN - для авторизации админа

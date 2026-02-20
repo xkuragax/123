@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multitrack Player</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#0f0f0f',
+            darker: '#080808',
+            accent: '#6366f1',
+            'accent-hover': '#818cf8',
+            muted: '#374151',
+            'text-primary': '#f9fafb',
+            'text-secondary': '#9ca3af'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Admin Styles -->
+  <link rel="stylesheet" href="./css/admin.css">
+  
+  <!-- Vue 3 -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
+  
+  <style>
+    * {
+      scrollbar-width: none;
+    }
+    *::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+    .animate-blink {
+      animation: blink 1s infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .animate-marquee {
+      animation: marquee 10s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-darker min-h-screen">
+  <div id="app"></div>
+  
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

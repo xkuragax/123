@@ -1,0 +1,21 @@
+{
+  "name": "multitrack-player-cloudflare",
+  "version": "1.0.0",
+  "description": "Multitrack Player for Cloudflare (Workers + Pages + R2 + D1)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:full": "npm run db:migrate && npm run deploy && npm run pages:deploy",
+    "db:create": "wrangler d1 create multitrack-db",
+    "db:migrate": "wrangler d1 migrations apply multitrack-db",
+    "db:migrate:local": "wrangler d1 migrations apply multitrack-db --local",
+    "pages:deploy": "wrangler pages deploy frontend --project-name=multitrack-player",
+    "r2:create": "wrangler r2 bucket create multitrack-files",
+    "setup": "node scripts/setup.js",
+    "import:data": "node scripts/import-data.js"
+  },
+  "devDependencies": {
+    "wrangler": "^3.22.0"
+  },
+  "dependencies": {}
+}

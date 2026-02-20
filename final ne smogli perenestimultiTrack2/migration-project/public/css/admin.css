@@ -1,0 +1,135 @@
+/* Admin Panel Styles */
+
+.card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  border-color: #6366f1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+.card.dragging {
+  opacity: 0.5;
+  border-color: #818cf8;
+}
+
+.btn-primary {
+  background: #6366f1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #818cf8;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #374151;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #4b5563;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background: #ef4444;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  background: #1a1a1a;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Slider styles */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #d1d5db;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #d1d5db;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
